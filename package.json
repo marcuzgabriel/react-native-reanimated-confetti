@@ -1,0 +1,61 @@
+{
+  "homepage": "https://marcuzgabriel.github.io/react-native-reanimated-confetti/",
+  "name": "@rnrc/monorepo",
+  "author": "Marcuz Gabriel Larsen <marcuzgabriel@gmail.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "qa": "yarn format; yarn lint; yarn tsc",
+    "format": "prettier --write --list-different '**/*.{json,ts,tsx}' --loglevel warn",
+    "lint": "eslint . --fix --ext .ts,.tsx --no-cache",
+    "start": "yarn workspace @rnrc/app start",
+    "storybook": "yarn workspace @rnrc/web storybook",
+    "build-storybook": "yarn workspace @rnrc/web build-storybook",
+    "type:check": "yarn tsc --noEmit",
+    "type:generate:tsc": "yarn tsc",
+    "type:generate:ios": "yarn type:generate:clean && yarn type:generate:create && yarn type:generate:tsc && yarn type:generate:delete:ios && yarn type:generate:copy:ios",
+    "type:generate:clean": "cross-env-shell rimraf ./packages/npm/lib",
+    "type:generate:create": "cross-env-shell mkdir ./packages/npm/lib",
+    "type:generate:delete:ios": "rm ./packages/npm/lib/ReactNativeReanimatedConfetti.js",
+    "type:generate:copy:ios": "rsync -auv ./packages/npm/src/ReactNativeReanimatedConfetti.ts ./packages/npm/lib/index.js"
+  },
+  "devDependencies": {
+    "@react-native/eslint-config": "^0.72.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@tsconfig/react-native": "^3.0.2",
+    "@types/jest": "^29.5.4",
+    "@types/react": "^18.2.21",
+    "@types/react-test-renderer": "^18.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^5.3.2",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.0.0",
+    "prettier": "^3.0.3",
+    "semantic-release": "21.1.1",
+    "semantic-release-cli": "^5.4.4",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "5.2.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

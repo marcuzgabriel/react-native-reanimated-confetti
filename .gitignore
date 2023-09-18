@@ -1,0 +1,89 @@
+.env
+.sonarlint
+.sonar_lock
+.scannerwork
+.build-tools
+.DS_Store
+
+coverage
+install.log
+/screenshots
+/.build-tools/
+/packages/.DS_Store
+/packages/web/.DS_Store
+/packages/android/.gradle
+/packages/android/.idea
+/packages/android/.settings
+/packages/android/app/build/*/**
+/packages/android/app/.cxx/**
+/packages/android/*/**.jks
+
+# OSX
+changes.txt
+
+# Xcode
+packages/ios/build/
+packages/ios/artifacts/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.dSYM.zip
+*.xcuserstate
+
+# Android/IntelliJ
+packages/android/.gradle
+packages/android/.idea
+packages/android/.settings
+packages/android/app/.cxx/**
+packages/android/app/release/app-release.aab
+packages/android/app/build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+
+# node.js
+node_modules/
+packages/app/node_modules
+packages/web/node_modules
+packages/npm/node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+# fastlane
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Ruby / CocoaPods
+ios/Pods/
+vendor/bundle/
+appcenter/*
+test-report.xml
+
+# TypeScript
+dist
+packages/npm/lib
