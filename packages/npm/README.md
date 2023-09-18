@@ -12,7 +12,7 @@ React native reanimated confetti, a simple yet fully customizable component made
 <a href="#badge">
 </div>
 <br>
-<img width="220px" src="https://raw.githubusercontent.com/@marcuzgabriel/react-native-reanimated-confetti/main/packages/web/gifs/confetti.gif" />
+<img width="220px" src="https://github.com/marcuzgabriel/react-native-reanimated-confetti/blob/main/packages/web/gifs/confetti.gif" />
 
 ### Installation
 `npm install react-native-reanimated-confetti`
@@ -28,7 +28,7 @@ React native reanimated confetti, a simple yet fully customizable component made
 
   - **Default Confetti** : The component will use the shapes which are located in ```src/components/Shapes```
 
-  - **Custom confetti** : Insert custom confetti shapes with the svgs props. The confetti shapes will consist of a mix of both default and custom shapes. Adding the prop onlyShowCustomSvgs to true will only show the custom shapes.
+  - **Custom confetti** : Insert custom confetti shapes with the svgs prop. The confetti shapes will consist of a mix of both default and custom shapes. Adding the prop onlyShowCustomSvgs to true will only show the custom shapes.
 
   ```js
   const ConfettiExample: React.FC = () => (
