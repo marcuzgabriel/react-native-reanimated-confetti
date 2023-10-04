@@ -3,7 +3,7 @@
   "author": "Marcuz Gabriel Larsen <marcuzgabriel@gmail.com>",
   "license": "MIT",
   "name": "react-native-reanimated-confetti",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
