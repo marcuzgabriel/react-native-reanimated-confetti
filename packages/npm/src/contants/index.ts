@@ -10,4 +10,5 @@ export const DEFAULT_CONFIG = {
   DELAY: 0,
   COLORS: ['#48b0f1', '#8fed8f', '#75f3c8', '#fff045', '#f357ac', '#b285fb'],
   SVGS: [],
+  CONTAINER_STYLE: {}
 };

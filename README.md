@@ -37,20 +37,20 @@ React native reanimated confetti, a simple yet fully customizable component made
   ```
 
 ### Props
-
 | Name               | Type                   | Description                                 | Required | Default         |
-|--------------------|------------------------|---------------------------------------------|----------|-----------------|
+| ------------------ | ---------------------- | ------------------------------------------- | -------- | --------------- |
 | count              | number                 | items count to display                      |          | 100             |
 | origin             | {x: number, y: number} | animation position origin                   |          | { x: -10, y: 0} |
 | explosionSpeed     | number                 | explosion duration (ms) from origin to top  |          | 350             |
 | fallSpeed          | number                 | fall duration (ms) from top to bottom       |          | 3000            |
 | fadeOut            | boolean                | make the confettis disappear at the end     |          | false           |
-| colors             | string[]               | give your own colors to the confettis       |          | default colors  |
+| colors             | string\[]              | give your own colors to the confettis       |          | default colors  |
 | onlyShowCustomSvgs | boolean                | only showing custom svgs based on svgs prop |          | false           |
-| svgs               | React.JSX.Element[]    | array containing your custom svgs           |          | []              |
+| svgs               | React.JSX.Element\[]   | array containing your custom svgs           |          | \[]             |
 | delay              | number                 | cannon / animation delay                    |          | 0               |
 | minSize            | number                 | min size of confetti shapes                 |          | 20              |
 | maxSize            | number                 | max size of confetti shapes                 |          | 30              |
+| style              | ViewStyle \| object    | container styles                            |          | {}              |
 
 ### Hotdog confetti example
 ```js

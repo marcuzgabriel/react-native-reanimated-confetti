@@ -22,6 +22,7 @@ export { ConfettiProps };
  * @maxSize maximum size of the confetti
  * @colors array of colors
  * @delay delay of the animation
+ * @style container styles
  */
 const Confetti: React.FC<ConfettiProps> = ({
   svgs = DEFAULT_CONFIG.SVGS,
@@ -35,6 +36,7 @@ const Confetti: React.FC<ConfettiProps> = ({
   maxSize = DEFAULT_CONFIG.MAX_SIZE,
   colors = DEFAULT_CONFIG.COLORS,
   delay = DEFAULT_CONFIG.DELAY,
+  style = DEFAULT_CONFIG.CONTAINER_STYLE,
 }) => {
   const [particles, setParticles] = useState<IParticle[]>([]);
   const createParticle = useCreateParticle();
@@ -46,7 +48,7 @@ const Confetti: React.FC<ConfettiProps> = ({
   }, [createParticle, count, particles]);
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       {particles.map((data, index) => (
         <Particle
           key={index}
@@ -69,9 +71,11 @@ const Confetti: React.FC<ConfettiProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
-});
+})
 
 export default memo(Confetti);
