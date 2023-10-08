@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ViewStyle } from 'react-native';
 
 export type IShape = {
   height: number;
@@ -39,4 +40,5 @@ export type ConfettiProps = {
   fallSpeed?: number;
   fadeOut?: boolean;
   onlyShowCustomSvgs?: boolean;
+  style?: ViewStyle | object;
 };
