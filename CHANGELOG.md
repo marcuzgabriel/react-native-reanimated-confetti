@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/marcuzgabriel/react-native-reanimated-confetti/compare/v1.1.0...v1.2.0) (2023-10-08)
+
+
+### Features
+
+* ability to pass in custom container styles ([af4187b](https://github.com/marcuzgabriel/react-native-reanimated-confetti/commit/af4187b4d87d6a08ca06b86b36cc22881cc07069))
+
 # [1.1.0](https://github.com/marcuzgabriel/react-native-reanimated-confetti/compare/v1.0.0...v1.1.0) (2023-10-04)
 
 
