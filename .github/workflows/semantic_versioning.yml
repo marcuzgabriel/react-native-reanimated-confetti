@@ -48,7 +48,7 @@ jobs:
         run: yarn
 
       - name: Install plugins
-        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer
+        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator
       
       - name: Print current version
         id: current_version
