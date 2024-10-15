@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "root": false,
+  "compilerOptions": {
+    "paths": {
+      "react-native-reanimated-confetti": ["./src"]
+    }
+  },
+  "include": ["src"]
+}

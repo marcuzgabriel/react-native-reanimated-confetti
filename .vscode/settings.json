@@ -1,8 +1,22 @@
 {
+  "editor.minimap.enabled": false,
+  "redhat.telemetry.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "eslint.format.enable": true,
+  "eslint.useESLintClass": true,
+  "eslint.useFlatConfig": true,
+  "eslint.workingDirectories": [
+      {
+          "mode": "auto"
+      }
+  ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
   },
-  "eslint.validate": ["javascript", "typescript", "react", "react-native"],
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.preferences.importModuleSpecifier": "non-relative"
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true
 }

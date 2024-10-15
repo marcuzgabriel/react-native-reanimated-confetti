@@ -1,0 +1,9 @@
+{
+  "extends": ["../../tsconfig.json"],
+  "compilerOptions": {
+    "paths": {
+      "react-native-skia-confetti": ["./src"]
+    }
+  },
+  "include": ["src", "index.ts"]
+}

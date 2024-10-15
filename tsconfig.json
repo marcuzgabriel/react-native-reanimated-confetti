@@ -1,28 +1,22 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "declaration": false,
-    "removeComments": true,
+    "baseUrl": ".",
+    "declaration": true,
     "preserveSymlinks": true,
-    "isolatedModules": true,
     "target": "es6",
-    "module": "es6",
+    "module": "NodeNext",
     "jsx": "react-native",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "lib": ["es6"],
+    "moduleResolution": "NodeNext",
+    "lib": ["es6", "dom", "ES2021"],
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./packages/npm/lib",
-    "rootDir": "./packages/npm/src",
-    "typeRoots": ["./node_modules/@types"]
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true
   },
-  "include": [
-    "packages/npm/**/*.ts",
-    "packages/npm/**/*.tsx",
-    "packages/npm/react-native-reanimated-confetti.d.ts"
-  ],
-  "exclude": ["node_modules", "packages/app", "packages/web"]
+  "exclude": ["node_modules"]
 }

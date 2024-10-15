@@ -9,6 +9,7 @@ coverage
 install.log
 /screenshots
 /.build-tools/
+/.yarn/cache
 /packages/.DS_Store
 /packages/web/.DS_Store
 /packages/android/.gradle
@@ -57,8 +58,10 @@ local.properties
 # node.js
 node_modules/
 packages/app/node_modules
-packages/web/node_modules
-packages/npm/node_modules
+packages/reanimated/node_modules
+packages/skia/node_modules
+packages/storybook/node_modules
+packages/shared/node_modules
 npm-debug.log
 yarn-error.log
 package-lock.json
