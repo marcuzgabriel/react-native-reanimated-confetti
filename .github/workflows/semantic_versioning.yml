@@ -2,13 +2,10 @@ name: Automatic semantic versioning
 on:
   push:
     branches: [main, develop, alpha, beta]
-  workflow_dispatch:
 jobs:
   versioning:
     name: Semantic versioning
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     outputs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
       next_version: ${{ steps.next_version.outputs.NEXT_VERSION }}
@@ -48,7 +45,7 @@ jobs:
         run: yarn
 
       - name: Install plugins
-        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec
+        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer
       
       - name: Print current version
         id: current_version
