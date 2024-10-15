@@ -3,7 +3,7 @@
   "author": "Marcuz Gabriel Larsen <marcuzgabriel@gmail.com>",
   "license": "MIT",
   "name": "react-native-reanimated-confetti",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "scripts": {
     "build": "yarn bob build"
   },

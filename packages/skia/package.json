@@ -3,7 +3,7 @@
   "author": "Marcuz Gabriel Larsen <marcuzgabriel@gmail.com>",
   "license": "MIT",
   "name": "react-native-skia-confetti",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "yarn bob build"
   },

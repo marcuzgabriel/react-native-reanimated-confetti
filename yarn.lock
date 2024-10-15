@@ -2421,19 +2421,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@marcuzgabriel/react-native-skia-confetti@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@marcuzgabriel/react-native-skia-confetti@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40marcuzgabriel%2Freact-native-skia-confetti%2F1.0.1%2F7ffc8ba3970dee1ebe587ea64f57f27deb301fcf"
-  peerDependencies:
-    "@shopify/react-native-skia": "*"
-    react: "*"
-    react-native: "*"
-    react-native-reanimated: "*"
-    react-native-svg: "*"
-  checksum: f6f8f4d2534ec8c769204a67b53d1632a1f09352fc28e7fe61685c0ca5e09f2ca2c0f98d484a00dc503c865a2a30b5e4813bf36668a6e22f41dcefb596246b25
-  languageName: node
-  linkType: hard
-
 "@mdx-js/react@npm:^3.0.0":
   version: 3.0.1
   resolution: "@mdx-js/react@npm:3.0.1"
@@ -3466,7 +3453,6 @@ __metadata:
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
-    "@marcuzgabriel/react-native-skia-confetti": 1.0.1
     "@react-native-community/cli": ^14.1.1
     "@react-native/babel-preset": 0.75.4
     "@react-native/gradle-plugin": 0.75.4
