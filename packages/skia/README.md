@@ -12,7 +12,7 @@ React Native Skia Confetti is a simple yet fully customizable component designed
 <a href="#badge">
 </div>
 <br>
-<img width="220px" src="https://github.com/marcuzgabriel/react-native-reanimated-confetti/blob/main/packages/web/gifs/confetti.gif" />
+<img width="220px" src="https://github.com/marcuzgabriel/react-native-reanimated-confetti/blob/main/packages/storybook/gifs/confetti.gif" />
 
 ### Installation
 

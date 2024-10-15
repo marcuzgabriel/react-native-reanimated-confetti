@@ -12,7 +12,7 @@ React native reanimated confetti, a simple yet fully customizable component made
 <a href="#badge">
 </div>
 <br>
-<img width="220px" src="https://github.com/marcuzgabriel/react-native-reanimated-confetti/blob/main/packages/web/gifs/confetti.gif" />
+<img width="220px" src="https://github.com/marcuzgabriel/react-native-reanimated-confetti/blob/main/packages/storybook/gifs/confetti.gif" />
 
 ### Installation
 
