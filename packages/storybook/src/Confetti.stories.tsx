@@ -2,8 +2,8 @@ import { WithSkiaWeb } from '@shopify/react-native-skia/lib/module/web';
 import { StoryObj } from '@storybook/react';
 import React from 'react';
 import { Text } from 'react-native';
-import Confetti from 'react-native-reanimated-confetti';
-import { ConfettiProps } from 'react-native-skia-confetti/src/Confetti';
+import Confetti from 'react-native-reanimated-confetti/src';
+import { ConfettiProps } from 'react-native-skia-confetti/src';
 
 interface StorybookConfettiProps extends ConfettiProps {
   activateExample?: boolean;
@@ -17,7 +17,7 @@ export default {
     ) : (
       <WithSkiaWeb
         // @ts-expect-error dynamic import is not supported by typescript
-        getComponent={() => import('react-native-skia-confetti/src/example')}
+        getComponent={() => import('react-native-skia-confetti/src')}
         fallback={<Text>Loading Skia...</Text>}
       />
     );

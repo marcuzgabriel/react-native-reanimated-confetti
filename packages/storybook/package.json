@@ -6,6 +6,9 @@
     "build-storybook": "storybook build",
     "storybook": "storybook dev"
   },
+  "installConfig": {
+    "selfReferences": true
+  },
   "dependencies": {
     "@shopify/react-native-skia": "^1.4.2",
     "@storybook/react": "^8.3.5",

@@ -9,8 +9,6 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-console.log(getAbsolutePath("@storybook/react-webpack5"))
-
 module.exports = {
   stories: ["../src/**/*.stories.?(ts|tsx|js|jsx)"],
   addons: [
