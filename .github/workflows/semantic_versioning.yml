@@ -6,6 +6,8 @@ on:
 jobs:
   versioning:
     name: Semantic versioning
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     runs-on: ubuntu-latest
     outputs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
@@ -46,7 +48,7 @@ jobs:
         run: yarn
 
       - name: Install plugins
-        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec
+        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github
       
       - name: Print current version
         id: current_version
