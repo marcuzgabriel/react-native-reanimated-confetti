@@ -6,6 +6,8 @@ on:
 jobs:
   versioning:
     name: Semantic versioning
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     runs-on: ubuntu-latest
     outputs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
