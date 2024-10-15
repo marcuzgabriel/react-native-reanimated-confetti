@@ -1,7 +1,4 @@
-name: Deploy Storybook to GitHub Pages
-
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: ['main']
   pull_request:
@@ -18,27 +15,43 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Setting up node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
 
+      - name: Install Yarn 3.6.4
+        run: |
+          npm install -g yarn
+          yarn set version 3.6.4
+
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .yarn/unplugged
+            .yarn/build-state.yml
+            .yarn/install-state.gz
+            .yarn/patches
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Install dependencies
-        run: yarn
+        run: yarn install
 
       - name: Build Storybook
         run: yarn build-storybook

@@ -10,8 +10,8 @@ jobs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
       next_version: ${{ steps.next_version.outputs.NEXT_VERSION }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
@@ -22,6 +22,24 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
+
+      - name: Install Yarn 3.6.4
+        run: |
+          npm install -g yarn
+          yarn set version 3.6.4
+  
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .yarn/unplugged
+            .yarn/build-state.yml
+            .yarn/install-state.gz
+            .yarn/patches
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         run: yarn
