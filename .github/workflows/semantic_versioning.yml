@@ -2,6 +2,7 @@ name: Automatic semantic versioning
 on:
   push:
     branches: [main, develop, alpha, beta]
+  workflow_dispatch:
 jobs:
   versioning:
     name: Semantic versioning
