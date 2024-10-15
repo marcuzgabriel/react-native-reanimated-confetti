@@ -3832,10 +3832,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sigstore/bundle@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@sigstore/bundle@npm:3.0.0"
+  dependencies:
+    "@sigstore/protobuf-specs": ^0.3.2
+  checksum: cef110acd000dea0cbdf01f48e979ea574e4f29439d2367bad255dcbe7ec185d66873f7c2428bbe109dffd944a50786e9eefc802f008d464dc683c1bbc8fb2d5
+  languageName: node
+  linkType: hard
+
 "@sigstore/core@npm:^1.0.0, @sigstore/core@npm:^1.1.0":
   version: 1.1.0
   resolution: "@sigstore/core@npm:1.1.0"
   checksum: bb870cf11cfb260d9e83f40cc29e6bbaf6ef5211d42eacbb48517ff87b1f647ff687eff557b0b30f9880fac2517d14704ec6036ae4a0d99ef3265b3d40cef29c
+  languageName: node
+  linkType: hard
+
+"@sigstore/core@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@sigstore/core@npm:2.0.0"
+  checksum: fd21df6ce574ef8fed855955ce864523368bdca8202ed9d90f2b4822f4889315a23f52eef72cbf09534af669329c8affdd36a3615c9598eb9311a4cc22f3f21a
   languageName: node
   linkType: hard
 
@@ -3860,6 +3876,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sigstore/sign@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@sigstore/sign@npm:3.0.0"
+  dependencies:
+    "@sigstore/bundle": ^3.0.0
+    "@sigstore/core": ^2.0.0
+    "@sigstore/protobuf-specs": ^0.3.2
+    make-fetch-happen: ^14.0.1
+    proc-log: ^5.0.0
+    promise-retry: ^2.0.1
+  checksum: 8a7523ef128808c0b962757e6451269ed966b56b5487c6e2b0708c3703e70d83d70911d0731cbc35e926400fbcf1ecb5187cf82aec3334d18a72e49e78f79330
+  languageName: node
+  linkType: hard
+
 "@sigstore/tuf@npm:^2.3.4":
   version: 2.3.4
   resolution: "@sigstore/tuf@npm:2.3.4"
@@ -3867,6 +3897,16 @@ __metadata:
     "@sigstore/protobuf-specs": ^0.3.2
     tuf-js: ^2.2.1
   checksum: 62f0b17e116d42d224c7d9f40a4037c7c20f456e026059ce6ebfc155e6d6445396549acd01a6f799943857e900f1bb2b0523d00a9353b8f3f99862f1eba59f6d
+  languageName: node
+  linkType: hard
+
+"@sigstore/tuf@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@sigstore/tuf@npm:3.0.0"
+  dependencies:
+    "@sigstore/protobuf-specs": ^0.3.2
+    tuf-js: ^3.0.1
+  checksum: 184b84642abb8cad377a845892d1039dfd29b4275f324f1987ed4153689887adddfe5172bfb7f1851f3f915c967f78e51d40e7efb6877a5ae61313a3b44af754
   languageName: node
   linkType: hard
 
@@ -3878,6 +3918,17 @@ __metadata:
     "@sigstore/core": ^1.1.0
     "@sigstore/protobuf-specs": ^0.3.2
   checksum: bcd08c152d6166e9c6a019c8cb50afe1b284c01753e219e126665d21b5923cbdba3700daa3cee5197a07af551ecca8b209a6c557fbc0e5f6a4ee6f9c531047fe
+  languageName: node
+  linkType: hard
+
+"@sigstore/verify@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@sigstore/verify@npm:2.0.0"
+  dependencies:
+    "@sigstore/bundle": ^3.0.0
+    "@sigstore/core": ^2.0.0
+    "@sigstore/protobuf-specs": ^0.3.2
+  checksum: 987d3d927f3be11f3a50287b4a30aff1abd622b59cbc233f633b32bf5a331c8b7da5624b27b01aa0213da4e14e28def23e43f353d95033a4a3b3f8b44a59564b
   languageName: node
   linkType: hard
 
@@ -4059,13 +4110,13 @@ __metadata:
   linkType: hard
 
 "@storybook/addon-ondevice-controls@npm:^8.3.6":
-  version: 8.3.7
-  resolution: "@storybook/addon-ondevice-controls@npm:8.3.7"
+  version: 8.3.9
+  resolution: "@storybook/addon-ondevice-controls@npm:8.3.9"
   dependencies:
     "@storybook/addon-controls": ^8.3.5
     "@storybook/core": ^8.3.5
-    "@storybook/react-native-theming": ^8.3.7
-    "@storybook/react-native-ui": ^8.3.7
+    "@storybook/react-native-theming": ^8.3.9
+    "@storybook/react-native-ui": ^8.3.9
     deep-equal: ^1.0.1
     prop-types: ^15.7.2
     react-native-modal-datetime-picker: ^14.0.0
@@ -4077,21 +4128,21 @@ __metadata:
     "@react-native-community/slider": "*"
     react: "*"
     react-native: "*"
-  checksum: 5c7fd1c935065d72af5ff2369de7b4bbe9474aaf396a99d452dc5fe9d42208802c0c43c492160be23b4d70a91397d39c3df9b7b6246ef3a6c3e67ced4c0855c3
+  checksum: 097d52e87c65b08071df13e79f1c6b8c45d8f508addb788d331c254166c058c1abbd82a01572c39b1089b415804629fadf7354e8c5a919a5b7d0c1e7adceaf08
   languageName: node
   linkType: hard
 
 "@storybook/addon-ondevice-notes@npm:^8.3.6":
-  version: 8.3.7
-  resolution: "@storybook/addon-ondevice-notes@npm:8.3.7"
+  version: 8.3.9
+  resolution: "@storybook/addon-ondevice-notes@npm:8.3.9"
   dependencies:
     "@storybook/core": ^8.3.5
-    "@storybook/react-native-theming": ^8.3.7
+    "@storybook/react-native-theming": ^8.3.9
     react-native-markdown-display: ^7.0.2
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 5c057e125ea9f7434f3ea240c9f4a52a5816ba4d50e0eb0b9802b8b8bc42fe5e5347de92406238461dcc9f3c5485bae1582be364421baeaf78cb49ad0be08ecc
+  checksum: 733a9dd6c510f087e09c6dcff540ec96ba36a0ec6ca7c14db41e1a7192268299755ee1ca7c779fd9e48af86d01469ad62593040db80a7e8a3daa1e2e70acd99a
   languageName: node
   linkType: hard
 
@@ -4428,25 +4479,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-native-theming@npm:^8.3.7":
-  version: 8.3.7
-  resolution: "@storybook/react-native-theming@npm:8.3.7"
+"@storybook/react-native-theming@npm:^8.3.9":
+  version: 8.3.9
+  resolution: "@storybook/react-native-theming@npm:8.3.9"
   dependencies:
     polished: ^4.3.1
   peerDependencies:
     react: "*"
     react-native: ">=0.57.0"
-  checksum: e4541919d03a289f5f3f24a9b0ed759f5da6723ea6c5071f14cd91170d13a3a108b2dee6d6baa1f1ccdb8f91a314f9569491dc689dcc94b6c8dd218ee370b5b0
+  checksum: f5f14f20b7fd1cf8b951f112a739510fd7257d9dc05e2ff8204ac708a510022be9f99d402722a23a196d80cbf9e2c56a37dddeb5bbc217e691c2817924ffa657
   languageName: node
   linkType: hard
 
-"@storybook/react-native-ui@npm:^8.3.7":
-  version: 8.3.7
-  resolution: "@storybook/react-native-ui@npm:8.3.7"
+"@storybook/react-native-ui@npm:^8.3.9":
+  version: 8.3.9
+  resolution: "@storybook/react-native-ui@npm:8.3.9"
   dependencies:
     "@storybook/core": ^8.3.5
     "@storybook/react": ^8.3.5
-    "@storybook/react-native-theming": ^8.3.7
+    "@storybook/react-native-theming": ^8.3.9
     fuse.js: ^7.0.0
     memoizerific: ^1.11.3
     polished: ^4.3.1
@@ -4459,20 +4510,20 @@ __metadata:
     react-native-reanimated: ">=3"
     react-native-safe-area-context: "*"
     react-native-svg: ">=14"
-  checksum: 22a71413a44cb0167d2a5bc257d51149b2e94badacb699f1d9dccabcd4b47cb8affff58bc49d1ed32cb7247b9663fb4581b7bbda912289492ba331bcacf5cd8b
+  checksum: 41dfa5c7edcf3b13672dfca34ae2dbeb67cacdf7229fa848bad540304b141fa95c7a661e932fbbcf0f3c743068e715adf81c73ce833ac592de8e8cc41640348a
   languageName: node
   linkType: hard
 
 "@storybook/react-native@npm:^8.3.6":
-  version: 8.3.7
-  resolution: "@storybook/react-native@npm:8.3.7"
+  version: 8.3.9
+  resolution: "@storybook/react-native@npm:8.3.9"
   dependencies:
     "@storybook/core": ^8.3.5
     "@storybook/csf": ^0.1.1
     "@storybook/global": ^5.0.0
     "@storybook/react": ^8.3.5
-    "@storybook/react-native-theming": ^8.3.7
-    "@storybook/react-native-ui": ^8.3.7
+    "@storybook/react-native-theming": ^8.3.9
+    "@storybook/react-native-ui": ^8.3.9
     chokidar: ^3.5.1
     commander: ^8.2.0
     dedent: ^1.5.1
@@ -4495,7 +4546,7 @@ __metadata:
   bin:
     sb-rn-get-stories: ./bin/get-stories.js
     sb-rn-watcher: ./bin/watcher.js
-  checksum: fadbf3a6b2756ec01afeea5e2cdd5e0ccc5a26e038d0f7c306cbfa61b6b9b0823992d0f2f1c6ff4f967a6fe2a905cf23a7c928516884bce02e75e3f5392be73b
+  checksum: 7713e7dcb6f992c890ee3ab5025d9e2b88eb7fb8db2fc8b270e0acc6b1146ab2b6dd524215f39438983d52b698c2e4ab1b50380b305efb1b5a3ca1eaa1bfd597
   languageName: node
   linkType: hard
 
@@ -4719,6 +4770,16 @@ __metadata:
     "@tufjs/canonical-json": 2.0.0
     minimatch: ^9.0.4
   checksum: 7a7370ac8dc3c18b66dddca3269d9b9282d891f1c289beb2060649fd50ef74eaa6494bd6d6b3edfe11f0f1efa14ec19c5ec819c7cf1871476c9e002115ffb9a7
+  languageName: node
+  linkType: hard
+
+"@tufjs/models@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@tufjs/models@npm:3.0.1"
+  dependencies:
+    "@tufjs/canonical-json": 2.0.0
+    minimatch: ^9.0.5
+  checksum: 95b179bc09e5a0b6dfc9e7001e15882e863e034bf41e0502e89f2fa82cb3f6d5bd9edaefd2baf2a7f515abdb521127adf771e8bbe66f3e7f212e3b777ae993f5
   languageName: node
   linkType: hard
 
@@ -8404,7 +8465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.5":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.6":
   version: 4.3.7
   resolution: "debug@npm:4.3.7"
   dependencies:
@@ -10278,9 +10339,9 @@ __metadata:
   linkType: hard
 
 "fast-uri@npm:^3.0.1":
-  version: 3.0.2
-  resolution: "fast-uri@npm:3.0.2"
-  checksum: ca00aadc84e0ab93a8a1700c386bc7cbeb49f47d9801083c258444eed31221fdf864d68fb48ea8acd7c512bf046b53c09e3aafd6d4bdb9449ed21be29d8d6f75
+  version: 3.0.3
+  resolution: "fast-uri@npm:3.0.3"
+  checksum: c52e6c86465f5c240e84a4485fb001088cc743d261a4b54b0050ce4758b1648bdbe53da1328ef9620149dca1435e3de64184f226d7c0a3656cb5837b3491e149
   languageName: node
   linkType: hard
 
@@ -16723,8 +16784,8 @@ __metadata:
   linkType: hard
 
 "pacote@npm:^19.0.0":
-  version: 19.0.0
-  resolution: "pacote@npm:19.0.0"
+  version: 19.0.1
+  resolution: "pacote@npm:19.0.1"
   dependencies:
     "@npmcli/git": ^6.0.0
     "@npmcli/installed-package-contents": ^3.0.0
@@ -16740,12 +16801,12 @@ __metadata:
     npm-registry-fetch: ^18.0.0
     proc-log: ^5.0.0
     promise-retry: ^2.0.1
-    sigstore: ^2.2.0
+    sigstore: ^3.0.0
     ssri: ^12.0.0
     tar: ^6.1.11
   bin:
     pacote: bin/index.js
-  checksum: 61c70be60310c56e6f3f7fdc34c435d4a6026bb6d7a340283a61619163e665c4a369fde9754719bb2a72f0dcb0850ed5d7ca1b79a477b46a06a4b210f4d2571d
+  checksum: 860f8c54c7fa40d2340810b0219040a283944a382e41344e4493623fa3d0cb1129331da2570126e073659af953542e37bf774f29e7fda7a561288315a1651746
   languageName: node
   linkType: hard
 
@@ -19399,6 +19460,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sigstore@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "sigstore@npm:3.0.0"
+  dependencies:
+    "@sigstore/bundle": ^3.0.0
+    "@sigstore/core": ^2.0.0
+    "@sigstore/protobuf-specs": ^0.3.2
+    "@sigstore/sign": ^3.0.0
+    "@sigstore/tuf": ^3.0.0
+    "@sigstore/verify": ^2.0.0
+  checksum: 02fae890fce0ffc8e6cd572c0b69ce73ec7266b489be4585029df4b316b63326c73e3e1b8d42e220fd23aad39102f4228818bf4f7010a165e3d5598f96769ed7
+  languageName: node
+  linkType: hard
+
 "sisteransi@npm:^1.0.5":
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
@@ -20675,9 +20750,9 @@ __metadata:
   linkType: hard
 
 "tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.6.2":
-  version: 2.7.0
-  resolution: "tslib@npm:2.7.0"
-  checksum: 1606d5c89f88d466889def78653f3aab0f88692e80bb2066d090ca6112ae250ec1cfa9dbfaab0d17b60da15a4186e8ec4d893801c67896b277c17374e36e1d28
+  version: 2.8.0
+  resolution: "tslib@npm:2.8.0"
+  checksum: de852ecd81adfdb4870927e250763345f07dc13fe7f395ce261424966bb122a0992ad844c3ec875c9e63e72afe2220a150712984e44dfd1a8a7e538a064e3d46
   languageName: node
   linkType: hard
 
@@ -20707,6 +20782,17 @@ __metadata:
     debug: ^4.3.4
     make-fetch-happen: ^13.0.1
   checksum: 23a8f84a33f4569296c7d1d6919ea87273923a3d0c6cc837a84fb200041a54bb1b50623f79cc77307325d945dfe10e372ac1cad105956e34d3df2d4984027bd8
+  languageName: node
+  linkType: hard
+
+"tuf-js@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "tuf-js@npm:3.0.1"
+  dependencies:
+    "@tufjs/models": 3.0.1
+    debug: ^4.3.6
+    make-fetch-happen: ^14.0.1
+  checksum: 5f7618c84ec60495b8bb2be7ae01811311c7fab591a373b6e45fc94d01b8a9e4de5c5c52125241edd4ecd9e1c0e5caddedb93a465690d3add0f7c40b2a10abbe
   languageName: node
   linkType: hard
 

@@ -1,7 +1,7 @@
 import fs from "fs";
-import babelConfig from "../babel.config";
-import { sources } from "webpack";
 import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
+import { sources } from "webpack";
+import babelConfig from "../babel.config";
 
 delete babelConfig.plugins[1][1].alias['^react-native$'];
 
