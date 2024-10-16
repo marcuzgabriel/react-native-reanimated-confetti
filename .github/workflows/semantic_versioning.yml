@@ -6,46 +6,30 @@ on:
 jobs:
   versioning:
     name: Semantic versioning
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [lts/*]
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-    runs-on: ubuntu-latest
     outputs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
       next_version: ${{ steps.next_version.outputs.NEXT_VERSION }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_TOKEN }}
 
-      - name: Setting up node
-        uses: actions/setup-node@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
 
-      - name: Install Yarn 3.6.4
-        run: |
-          npm install -g yarn
-          yarn set version 3.6.4
-
-      # Get the yarn cache path.
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Restore yarn cache
-        uses: actions/cache@v2
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-          restore-keys: |
-            yarn-cache-folder-
-
-      - name: Install dependencies
-        run: yarn
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/yarn-nm-install
+        with:     
+          cache-node-modules: true
+          cache-install-state: true 
 
       - name: Install plugins
         run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github
