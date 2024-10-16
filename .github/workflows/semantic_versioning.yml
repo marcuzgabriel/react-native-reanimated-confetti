@@ -24,25 +24,25 @@ jobs:
         with:
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
-          cache: 'yarn'
 
       - name: Install Yarn 3.6.4
         run: |
           npm install -g yarn
           yarn set version 3.6.4
-  
-      - name: Cache Yarn dependencies
-        uses: actions/cache@v4
+
+      # Get the yarn cache path.
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Restore yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: |
-            .yarn/cache
-            .yarn/unplugged
-            .yarn/build-state.yml
-            .yarn/install-state.gz
-            .yarn/patches
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            yarn-cache-folder-
 
       - name: Install dependencies
         run: yarn
@@ -53,7 +53,7 @@ jobs:
       - name: Print current version
         id: current_version
         run: echo "CURRENT_VERSION=$(jq -r ".version" ./package.json)" >> $GITHUB_OUTPUT;
-      
+
       - name: Run semantic release
         id: next_version
         run: yarn semantic-release --extends ./releaserc.json
@@ -61,10 +61,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
   print:
-      needs: versioning
-      runs-on: ubuntu-latest
-      steps:
-        - name: Print version numbers
-          run: |
-            echo "Current version is: ${{ needs.versioning.outputs.CURRENT_VERSION }}"
-            echo "Next version is: ${{ needs.versioning.outputs.NEXT_VERSION }}"
+    needs: versioning
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print version numbers
+        run: |
+          echo "Current version is: ${{ needs.versioning.outputs.CURRENT_VERSION }}"
+          echo "Next version is: ${{ needs.versioning.outputs.NEXT_VERSION }}"
