@@ -36,9 +36,6 @@ jobs:
 
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
-        with:     
-          cache-node-modules: true
-          cache-install-state: true 
 
       - name: Build Storybook
         run: yarn build-storybook
