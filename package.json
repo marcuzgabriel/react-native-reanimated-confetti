@@ -2,7 +2,7 @@
   "homepage": "https://marcuzgabriel.github.io/react-native-reanimated-confetti/",
   "name": "react-native-confetti",
   "author": "Marcuz Gabriel Larsen <marcuzgabriel@gmail.com>",
-  "version": "1.3.0",
+  "version": "1.4.2",
   "license": "MIT",
   "private": true,
   "workspaces": [

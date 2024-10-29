@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/marcuzgabriel/react-native-reanimated-confetti/compare/v1.4.1...1.4.2) (2024-10-29)
+
+### :bug: Bug Fixes
+
+* Correct filename ([6660afa](https://github.com/marcuzgabriel/react-native-reanimated-confetti/commit/6660afa1d5bee6efae697c72b091b633d1633165))
+* Semantic release npx ([49c1b03](https://github.com/marcuzgabriel/react-native-reanimated-confetti/commit/49c1b032908618a7ee16cb09d3c1e87afe687043))
+
 # [1.3.0](https://github.com/marcuzgabriel/react-native-reanimated-confetti/compare/v1.2.0...v1.3.0) (2024-10-15)
 
 
