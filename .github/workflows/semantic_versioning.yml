@@ -23,13 +23,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://npm.pkg.github.com'
 
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
-
-      - name: Install plugins
-        run: yarn add -D @semantic-release/changelog @semantic-release/git @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/npm @semantic-release/github
 
       - name: Print current version
         id: current_version
