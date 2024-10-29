@@ -11,7 +11,8 @@ jobs:
       matrix:
         node-version: [lts/*]
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+
     outputs:
       current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
       next_version: ${{ steps.next_version.outputs.NEXT_VERSION }}

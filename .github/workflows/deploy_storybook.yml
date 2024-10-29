@@ -22,7 +22,7 @@ jobs:
       matrix:
         node-version: [lts/*]
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
       - name: Checkout repo
