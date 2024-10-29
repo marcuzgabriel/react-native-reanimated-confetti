@@ -41,7 +41,7 @@ jobs:
 
       - name: Run semantic release
         id: get-next-version
-        run: npx semantic-release --ci
+        run: yarn semantic-release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     outputs:
