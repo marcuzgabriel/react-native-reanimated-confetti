@@ -8092,6 +8092,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"conventional-changelog-conventionalcommits@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "conventional-changelog-conventionalcommits@npm:8.0.0"
+  dependencies:
+    compare-func: ^2.0.0
+  checksum: af80a3294ec833b6ca6b13874c275952391319dd0ebb771dbcf0b837a2f8504c197e894a3fc5def44574a04daa038a94cae8d00f8222e843bc788b6911a1eff4
+  languageName: node
+  linkType: hard
+
 "conventional-changelog-core@npm:^7.0.0":
   version: 7.0.0
   resolution: "conventional-changelog-core@npm:7.0.0"
@@ -18324,6 +18333,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^8.9.0
     "@typescript-eslint/parser": ^8.9.0
     conventional-changelog: ^5.1.0
+    conventional-changelog-conventionalcommits: ^8.0.0
     cross-env: ^7.0.3
     eslint: ^9.12.0
     eslint-config-prettier: ^9.1.0
