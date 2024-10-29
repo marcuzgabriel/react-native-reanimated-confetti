@@ -3,10 +3,16 @@ on:
   push:
     branches: [main, develop, alpha, beta]
   workflow_dispatch:
+
 jobs:
   versioning:
     name: Semantic versioning
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     strategy:
       matrix:
         node-version: [lts/*]
