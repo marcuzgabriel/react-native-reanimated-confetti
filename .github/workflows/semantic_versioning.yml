@@ -1,30 +1,32 @@
 name: Automatic semantic versioning
 on:
   push:
-    branches: [main, develop, alpha, beta]
+    branches: ['main']
+  pull_request:
+    branches: ['main']
   workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 
 jobs:
   versioning:
     name: Semantic versioning
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
-      id-token: write
     strategy:
       matrix:
         node-version: [lts/*]
     env:
       NPM_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-    outputs:
-      current_version: ${{ steps.current_version.outputs.CURRENT_VERSION }}
-      next_version: ${{ steps.next_version.outputs.NEXT_VERSION }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -39,16 +41,21 @@ jobs:
         run: echo "CURRENT_VERSION=$(jq -r ".version" ./package.json)" >> $GITHUB_OUTPUT;
 
       - name: Run semantic release
-        id: next_version
-        run: yarn semantic-release --extends ./releaserc.json
+        id: get-next-version
+        run: yarn semantic-release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    outputs:
+      new-release-published: ${{ steps.get-next-version.outputs.new-release-published }}
+      new-release-version: ${{ steps.get-next-version.outputs.new-release-version }}
+      new-release-git-tag: ${{ steps.get-next-version.outputs.new-release-git-tag }}
 
   print:
-    needs: versioning
     runs-on: ubuntu-latest
+    needs: versioning
+    if: needs.versioning.outputs.new-release-published == 'true'
     steps:
       - name: Print version numbers
         run: |
-          echo "Current version is: ${{ needs.versioning.outputs.CURRENT_VERSION }}"
-          echo "Next version is: ${{ needs.versioning.outputs.NEXT_VERSION }}"
+          echo "The new release version is ${{ needs.versioning.outputs.new-release-version }}"
+          echo "The new release version is ${{ needs.versioning.outputs.new-release-git-tag }}"
