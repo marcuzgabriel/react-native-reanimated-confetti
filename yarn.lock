@@ -2421,6 +2421,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@marcuzgabriel/react-native-reanimated-skeleton@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@marcuzgabriel/react-native-reanimated-skeleton@npm:1.5.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40marcuzgabriel%2Freact-native-reanimated-skeleton%2F1.5.0%2Fa65ab03bad777d5595e560db9a9d784a234d7664"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-linear-gradient: "*"
+    react-native-reanimated: "*"
+  checksum: 8ef7b6a8bbbc27c81d9bf8b08fd69096338721eeb287aec9ebe40a06ee309d123406dabcc3b0cea80848f6400961ad15c8be7bb15d2b3b019d3c001628207633
+  languageName: node
+  linkType: hard
+
 "@mdx-js/react@npm:^3.0.0":
   version: 3.0.1
   resolution: "@mdx-js/react@npm:3.0.1"
@@ -18004,6 +18016,7 @@ __metadata:
     "@eslint/compat": ^1.2.0
     "@eslint/eslintrc": ^3.1.0
     "@eslint/js": ^9.12.0
+    "@marcuzgabriel/react-native-reanimated-skeleton": ^1.5.0
     "@react-native/eslint-config": ^0.75.4
     "@react-native/eslint-plugin": ^0.75.4
     "@react-native/typescript-config": ^0.75.4
