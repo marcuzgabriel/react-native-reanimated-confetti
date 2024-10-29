@@ -1,26 +1,19 @@
-const { dirname, join } = require('path');
-
-
-function getAbsolutePath(value) {
-  return dirname(require.resolve(join(value, 'package.json')));
-}
-
 module.exports = {
   branches: ['main', { name: 'development', prerelease: true }],
   tagFormat: '${version}',
   plugins: [
-    getAbsolutePath('@semantic-release/commit-analyzer'),
-    getAbsolutePath('@semantic-release/release-notes-generator'),
-    getAbsolutePath('@semantic-release/changelog'),
-    getAbsolutePath('@semantic-release/github'),
-    [getAbsolutePath('@semantic-release/npm'), { npmPublish: false }],
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
+    '@semantic-release/changelog',
+    '@semantic-release/github',
+    ['@semantic-release/npm', { npmPublish: false }],
     [
-      getAbsolutePath('@semantic-release/git'),
+      '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json'],
       },
     ],
-    getAbsolutePath('semantic-release-export-data'),
+    'semantic-release-export-data',
   ],
   preset: 'conventionalcommits',
   presetConfig: {
