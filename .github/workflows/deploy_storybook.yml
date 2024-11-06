@@ -36,6 +36,9 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
 
+      - name: Format code
+        run: yarn format
+
       - name: Build Storybook
         run: yarn build-storybook
 
